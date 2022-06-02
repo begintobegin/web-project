@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*-------------------------------------------------------------------------------------*/
+.wrapper {
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1124px;
+  margin: 0 auto;
+}
+
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-x: hidden;
+}
+
+body a {
+  color: inherit;
+}
+
+/*-------------------------------------------------------------------------------------*/
+.header {
+  z-index: 3;
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 28px 10px;
+}
+
+.header__title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__list :not(:last-child) {
+  margin: 0px 52px 0px 0px;
+}
+
+.header__li {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  -webkit-animation: noanimate 0.5s ease-in forwards;
+          animation: noanimate 0.5s ease-in forwards;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
+}
+
+.header__li :hover {
+  color: black;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 500px) {
+  .header__list :not(:last-child) {
+    margin: 0px 10px 0px 0px;
+  }
+}
+
+.grad {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c31432), to(#3a00d8));
+  background: linear-gradient(#c31432, #3a00d8);
+}
+
+.discription {
+  margin-top: 876px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a00d8), to(#000002));
+  background: linear-gradient(#3a00d8, #000002);
+}
+
+.discription__body {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0px 300px 0px;
+}
+
+.discription__text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  margin: 0px 30px;
+}
+
+.portfolio {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000002), to(#5b0583));
+  background: linear-gradient(#000002, #5b0583);
+}
+
+.portfolio__body {
+  padding: 100px 0px 100px 0px;
+  margin: 0px 30px;
+}
+
+.portfolio__colums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px -41px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio__colum {
+  padding: 0px 41px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.portfolio__image {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 430px) {
+  .portfolio__image img {
+    width: 300px;
+  }
+}
+
+.portfolio__text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19.6913px;
+  line-height: 160%;
+  color: white;
+}
+
+.portfolio__btn {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19.6913px;
+  line-height: 160%;
+  color: white;
+  padding: 0px 10px;
+  margin: 30px 0px;
+  background: #BD00FF;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.portfolio__btn:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #06DBAC;
+  color: black;
+}
+
+.footer {
+  background-color: #5b0583;
+}
+
+.footer__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 100px 0px 30px 0px;
+}
+
+.footer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 0px 10px 30px 10px;
+}
+
+.footer__input {
+  background: #FFFFFF;
+  opacity: 0.25;
+  width: 300px;
+  height: 44px;
+  border-radius: 50px 0px 0px 50px;
+}
+
+.footer__input[value="E-mail"] {
+  padding: 0px 0px 0px 30px;
+}
+
+.footer__button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+  border-radius: 0px 50px 50px 0px;
+}
+
+#c {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
